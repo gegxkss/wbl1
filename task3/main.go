@@ -22,7 +22,6 @@ func main() {
 	for i := 0; i < numWorkers; i++ {
 		go work(i, dataChannel)
 	}
-
 	//реализация постоянной записи данных, но с ограничением в 100 сообщений
 	for count := 1; count < 100; count++ {
 		message := fmt.Sprintf("Coобщение %d", count)
